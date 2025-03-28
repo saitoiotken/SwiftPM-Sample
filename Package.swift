@@ -27,7 +27,27 @@ let package = Package(
             ],
             resources: [.copy("FluctSDKResources.bundle")],
             linkerSettings: [
-                // TODO
+                .linkedFramework("AdSupport"),
+                .linkedFramework("AppTrackingTransparency"),
+                .linkedFramework("AudioToolbox"),
+                .linkedFramework("AVFoundation"),
+                .linkedFramework("CoreGraphics"),
+                .linkedFramework("CoreMedia"),
+                .linkedFramework("CoreMotion"),
+                .linkedFramework("CoreTelephony"),
+                .linkedFramework("Foundation"),
+                .linkedFramework("MessageUI"),
+                .linkedFramework("SafariServices"),
+                .linkedFramework("StoreKit"),
+                .linkedFramework("SystemConfiguration"),
+                .linkedFramework("UIKit"),
+                .linkedFramework("WebKit"),
+                
+                .linkedLibrary("z"),
+                
+                // NOTE: Swift Package Manager currently does not allow dependencies with unsafeFlags, unless a specific branch/commit is used.
+                // For now, these flags should be added manually to the project for integration.
+                // .unsafeFlags(["-ObjC"])
             ])
     ]
 )
