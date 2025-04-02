@@ -48,6 +48,9 @@ let package = Package(
                 // NOTE: Swift Package Manager currently does not allow dependencies with unsafeFlags, unless a specific branch/commit is used.
                 // For now, these flags should be added manually to the project for integration.
                 // .unsafeFlags(["-ObjC"])
-            ])
+            ]),
+        .testTarget(
+            name: "FluctSDKPackageTests",
+            dependencies: ["FluctSDKPackage"]),
     ]
 )
