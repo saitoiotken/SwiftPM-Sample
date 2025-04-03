@@ -51,6 +51,7 @@ let package = Package(
             ]),
         .testTarget(
             name: "FluctSDKPackageTests",
-            dependencies: ["FluctSDKPackage"]),
+            dependencies: ["FluctSDKPackage"]
+            ),
     ]
 )

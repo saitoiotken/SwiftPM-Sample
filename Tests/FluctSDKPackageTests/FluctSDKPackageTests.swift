@@ -8,4 +8,18 @@ final class FluctSDKPackageTests: XCTestCase {
         // results.
         XCTAssertEqual(FluctSDKPackage().text, "Hello, World!")
     }
+    func testBundle() throws {
+        if let bundleURL = Bundle.module.url(forResource: "FluctSDKResources", withExtension: "bundle") {
+            if let resourceBundle = Bundle(url: bundleURL) {
+                // ここでresourceBundleを使ってリソースにアクセスできます
+                if let imageURL = UIImage(named: "btn_rewarded_video_voice_on", in: resourceBundle, compatibleWith: nil) {
+                    // リソースのURLが取得できました。画像などをロードできます。
+                    print("Image URL: \(imageURL)")
+                }
+                if let js = resourceBundle.url(forResource: "mraid", withExtension: "js") {
+                    print("js: \(js)")
+                }
+            }
+        }
+    }
 }
