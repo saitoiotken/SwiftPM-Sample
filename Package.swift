@@ -16,8 +16,8 @@ let package = Package(
     targets: [
         // TODO: リリース時に本番環境に変更予定
         .binaryTarget(name: "FluctSDK",
-                      url: "https://github.com/saitoiotken/SwiftPM-Sample/releases/download/6.40.0/FluctSDK.xcframework.zip",
-                      checksum: "7ac750b4ab204b659bf4597967b01c53f595e0e7a24efa6a9c6d8688c50f1ea2"),
+                      url: "https://github.com/saitoiotken/SwiftPM-Sample/releases/download/6.40.1/FluctSDK.xcframework.zip",
+                      checksum: "68cdb4621aa0c2b73c6c7ed6de065b8d974f6b52d9adb42dfbf4b4ba1d245a39"),
         .target(
             name: "FluctSDKResources",
             dependencies: [
